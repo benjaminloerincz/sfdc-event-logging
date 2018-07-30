@@ -1,6 +1,6 @@
 <aura:component implements="force:appHostable" >
 	<c:streaming channel="/event/Log__e" onMessage="{!c.handleMessage}"/>
-    <lightning:card title="Streaming Component Demo" class="cardHeight">
+    <lightning:card title="Streaming Component" class="cardHeight">
         <p class="slds-p-horizontal--small">
 		    {!v.body}    
         </p>
