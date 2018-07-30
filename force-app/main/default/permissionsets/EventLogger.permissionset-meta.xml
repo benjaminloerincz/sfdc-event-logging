@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>EventLogger</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <description>App that gives you access to the Event Logger Application</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Event Logger</label>
+    <license>Salesforce</license>
+</PermissionSet>
