@@ -11,8 +11,23 @@ Documentation
 - Dreamforce 2017 Session **Recording**, [Advanced Logging with Platform Events](https://www.youtube.com/watch?v=yYeurYnasVc)
 - Dreamforce 2017 Session **Slides**, [Advanced Logging with Platform Events](https://www.slideshare.net/secret/IZg60GFyxpnfXA)
 
+Deploying to a Sandbox
+-----
+Make a temporary directory to convert your source
+```
+mkdir src
+```
+Convert project to metadata API format
+```
+sfdx force:source:convert -d src/ --packagename package_name
+```
+Deploy to sandbox
+```
+sfdx force:mdapi:deploy -d mdapioutput_dir/ -u "sandbox_username" -l RunSpecifiedTests -r LogTest
+```
+
 Notes
 -----
 
 - Deploy My Domain
-- Assign Event Logger app to your Profile
+- Assign Event Logger Permission Set
