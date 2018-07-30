@@ -39,7 +39,7 @@ sfdx force:auth:web:login --setalias customm-domain --instanceurl https://org.my
 
 Deploy to Org
 ```
-sfdx force:mdapi:deploy -d src/ -u "org_alias" -l RunSpecifiedTests -r LogTest
+sfdx force:mdapi:deploy -d src/ -l RunSpecifiedTests -r LogTest,SessionControllerTest --wait 30 -u "org_alias"
 ```
 
 Notes
