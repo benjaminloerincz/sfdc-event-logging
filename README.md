@@ -23,7 +23,7 @@ sfdx force:source:convert -d src/ --packagename package_name
 ```
 Deploy to sandbox
 ```
-sfdx force:mdapi:deploy -d mdapioutput_dir/ -u "sandbox_username" -l RunSpecifiedTests -r LogTest
+sfdx force:mdapi:deploy -d src/ -u "sandbox_username" -l RunSpecifiedTests -r LogTest
 ```
 
 Notes
