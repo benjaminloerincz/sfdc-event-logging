@@ -19,7 +19,7 @@ mkdir src
 ```
 Convert project to metadata API format
 ```
-sfdx force:source:convert -d src/ --packagename package_name
+sfdx force:source:convert -d src/ --packagename eventlogging
 ```
 
 Authenticate to your org
