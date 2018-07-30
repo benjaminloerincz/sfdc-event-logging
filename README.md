@@ -21,9 +21,25 @@ Convert project to metadata API format
 ```
 sfdx force:source:convert -d src/ --packagename package_name
 ```
-Deploy to sandbox
+
+Authenticate to your org
+
+Sandbox
 ```
-sfdx force:mdapi:deploy -d src/ -u "sandbox_username" -l RunSpecifiedTests -r LogTest
+sfdx force:auth:web:login --setalias sandbox --instanceurl https://test.salesforce.com
+```
+Production
+```
+sfdx force:auth:web:login --setalias prod --instanceurl https://test.salesforce.com
+```
+Custom Domain
+```
+sfdx force:auth:web:login --setalias customm-domain --instanceurl https://org.my.salesforce.com
+```
+
+Deploy to Org
+```
+sfdx force:mdapi:deploy -d src/ -u "org_alias" -l RunSpecifiedTests -r LogTest
 ```
 
 Notes
