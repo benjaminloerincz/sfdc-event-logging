@@ -14,4 +14,21 @@ private class LogTest {
         Test.stopTest();
         System.assertEquals(1,[SELECT count() FROM LogRecording__c]);
 	}
+
+    @IsTest
+    public static void logExceptionTest() { 
+        Test.startTest();
+        try {
+            Integer i;
+            i++;
+        } catch(Exception e) {
+            log.push('MyTestClass');
+            log.rootReason('In a test class');
+            log.rootException(e);
+            Log.emit();     
+        }
+        Test.stopTest();
+        System.assertEquals(1,[SELECT count() FROM LogRecording__c]);
+	}
+
 }

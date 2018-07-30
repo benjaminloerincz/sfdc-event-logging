@@ -8,20 +8,17 @@ public with sharing class LogService {
             logRecording.Data__c = logEvent.Data__c;
             logRecording.SOQL__c = logEvent.SOQL__c;
             logRecording.Title__c = logEvent.Title__c;
-            logRecording.Reason__c = getReason(logEvent);
+            logRecording.Reason__c = logEvent.Reason__c;
+            logRecording.Callouts__c = logEvent.Callouts__c;
+            logRecording.CPUTime__c = logEvent.CPUTime__c;
+            logRecording.QueryRows__c = logEvent.QueryRows__c;
+            logRecording.ExceptionType__c = logEvent.ExceptionType__c;
+            logRecording.ExceptionStackTrace__c = logEvent.ExceptionStackTrace__c;
+            logRecording.ExceptionMessage__c = logEvent.ExceptionMessage__c;
+            logRecording.HeapSize__c = logEvent.HeapSize__c;
             logRecordings.add(logRecording);
         }
         insert logRecordings;
-    }
-
-    public static String getReason(Log__e logEvent) {
-        if (logEvent.SOQL__c > 100) {
-           return 'Query Limit Exceeded';
-        } else if(logEvent.DML__c > 150) {
-            return 'DML Limit Exceeded';
-        } else {
-            return 'Exception Thrown';
-        }
     }
 
 }
