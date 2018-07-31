@@ -42,6 +42,24 @@ Deploy to Org
 sfdx force:mdapi:deploy -d src/ -l RunSpecifiedTests -r LogTest,SessionControllerTest --wait 30 -u "org_alias"
 ```
 
+Example Implementation
+-----
+```java
+public void myTriggerMethod() {
+    try {
+        // do something wrong
+    } catch(Exception e) {
+        Log.push('MyClass.myTriggerMethod');
+        Log.rootReason('Additional context as to what is going on');
+        Log.rootException(e); //Exception information will be parsed out.
+        Log.emit(); //Platform event is published
+        for(SObject record : records) {
+            record.addError(e.getMessage()); //add error to display to users.
+        }
+    }
+}
+```
+
 Notes
 -----
 
