@@ -42,6 +42,13 @@ Deploy to Org
 sfdx force:mdapi:deploy -d src/ -l RunSpecifiedTests -r LogTest,SessionControllerTest --wait 30 -u "org_alias"
 ```
 
+Generating Unique Error Ids
+-----
+You can generate a unique error ID with the following code:
+```java
+String errorId = LogService.createErrorId();
+```
+
 Example Implementation
 -----
 ```java
