@@ -30,11 +30,11 @@ sfdx force:auth:web:login --setalias sandbox --instanceurl https://test.salesfor
 ```
 Production
 ```
-sfdx force:auth:web:login --setalias prod --instanceurl https://test.salesforce.com
+sfdx force:auth:web:login --setalias prod --instanceurl https://login.salesforce.com
 ```
 Custom Domain
 ```
-sfdx force:auth:web:login --setalias customm-domain --instanceurl https://org.my.salesforce.com
+sfdx force:auth:web:login --setalias customm-domain --instanceurl https://mydomain.my.salesforce.com
 ```
 
 Deploy to Org
