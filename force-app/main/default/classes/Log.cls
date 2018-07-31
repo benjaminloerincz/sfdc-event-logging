@@ -77,6 +77,13 @@ public class Log {
         Log.root.exceptionStackTrace = e.getStackTraceString();
         Log.root.exceptionMessage = e.getMessage();
     }
+
+    /**
+     * Add the given message to the scope last pushed
+     **/
+    public static void recordId(Id recordId) {
+		Log.root.recordId = recordId;
+    }
     
     /**
      * Pop the current scope
@@ -146,6 +153,7 @@ public class Log {
                 ExceptionStackTrace__c = root.exceptionStackTrace,
                 ExceptionMessage__c = root.exceptionMessage,
                 Reason__c = root.reason,
+                RunningUserId__c = UserInfo.getUserId(),
                 Data__c = flush()));
     }    
     
@@ -169,6 +177,7 @@ public class Log {
         public String exceptionStackTrace;
         public String exceptionMessage;
         public String reason;
+        public Id recordId;
         public List<Integer> limits;
         public List<Object> logEntries = new List<Object>();
         

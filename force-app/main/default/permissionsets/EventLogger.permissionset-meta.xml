@@ -7,6 +7,16 @@
     <description>App that gives you access to the Event Logger Application</description>
     <fieldPermissions>
         <editable>false</editable>
+        <field>LogRecording__c.CPUTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>LogRecording__c.Callouts__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>LogRecording__c.DML__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -17,7 +27,42 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>LogRecording__c.ExceptionMessage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>LogRecording__c.ExceptionStackTrace__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>LogRecording__c.ExceptionType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>LogRecording__c.HeapSize__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>LogRecording__c.QueryRows__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>LogRecording__c.Reason__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>LogRecording__c.RecordId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>LogRecording__c.RunningUser__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

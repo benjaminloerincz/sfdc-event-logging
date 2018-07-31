@@ -20,6 +20,10 @@
                 <behavior>Edit</behavior>
                 <field>Title__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>RunningUser__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -29,6 +33,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Reason__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>RecordId__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

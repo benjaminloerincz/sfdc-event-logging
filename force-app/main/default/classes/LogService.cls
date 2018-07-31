@@ -16,6 +16,8 @@ public with sharing class LogService {
             logRecording.ExceptionStackTrace__c = logEvent.ExceptionStackTrace__c;
             logRecording.ExceptionMessage__c = logEvent.ExceptionMessage__c;
             logRecording.HeapSize__c = logEvent.HeapSize__c;
+            logRecording.RunningUser__c = logEvent.RunningUserId__c;
+            logRecording.RecordId__c = logEvent.RecordId__c;
             logRecordings.add(logRecording);
         }
         insert logRecordings;
