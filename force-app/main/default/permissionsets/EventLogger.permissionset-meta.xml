@@ -27,6 +27,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>LogRecording__c.ErrorId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>LogRecording__c.ExceptionMessage__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -53,11 +58,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>LogRecording__c.Reason__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>LogRecording__c.RecordId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
