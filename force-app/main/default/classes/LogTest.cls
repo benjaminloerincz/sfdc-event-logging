@@ -22,7 +22,9 @@ private class LogTest {
             Integer i;
             i++;
         } catch(Exception e) {
+            String errorId = LogService.createErrorId();
             log.push('MyTestClass');
+            log.errorId(errorId);
             log.rootReason('In a test class');
             log.rootException(e);
             Log.emit();     

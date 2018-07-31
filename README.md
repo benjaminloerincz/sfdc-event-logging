@@ -49,12 +49,16 @@ public void myTriggerMethod() {
     try {
         // do something wrong
     } catch(Exception e) {
+        String errorId = LogService.createErrorId();
         Log.push('MyClass.myTriggerMethod');
-        Log.rootReason('Additional context as to what is going on');
+        log.errorId(errorId);
+        Log.message('Additional context as to what is going on');
+        Log.rootReason('Supply a root reason if one exists');
         Log.rootException(e); //Exception information will be parsed out.
+        Log.pop();
         Log.emit(); //Platform event is published
         for(SObject record : records) {
-            record.addError(e.getMessage()); //add error to display to users.
+            record.addError(errorId + ': ' + e.getMessage()); //add error to display to users.
         }
     }
 }

@@ -63,10 +63,17 @@ public class Log {
     }
 
     /**
-     * Add the given message to the scope last pushed
+     * Set root reason
      **/
     public static void rootReason(String reason) {
 		Log.root.reason = reason;
+    }
+
+    /**
+     * Set a unique error Id.
+     **/
+    public static void errorId(String errorId) {
+		Log.root.errorId = errorId;
     }
 
     /**
@@ -76,13 +83,6 @@ public class Log {
         Log.root.exceptionType = e.getTypeName();
         Log.root.exceptionStackTrace = e.getStackTraceString();
         Log.root.exceptionMessage = e.getMessage();
-    }
-
-    /**
-     * Add the given message to the scope last pushed
-     **/
-    public static void recordId(Id recordId) {
-		Log.root.recordId = recordId;
     }
     
     /**
@@ -153,6 +153,7 @@ public class Log {
                 ExceptionStackTrace__c = root.exceptionStackTrace,
                 ExceptionMessage__c = root.exceptionMessage,
                 Reason__c = root.reason,
+                ErrorId__c = root.errorId,
                 RunningUserId__c = UserInfo.getUserId(),
                 Data__c = flush()));
     }    
@@ -177,7 +178,7 @@ public class Log {
         public String exceptionStackTrace;
         public String exceptionMessage;
         public String reason;
-        public Id recordId;
+        public String errorId;
         public List<Integer> limits;
         public List<Object> logEntries = new List<Object>();
         
