@@ -3,7 +3,7 @@ Salesforce Logging framework powered by Platform Events
 
 [![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com/)
 
-Deploying to a Sandbox
+Installation
 -----
 Make a temporary directory to convert your source
 ```
