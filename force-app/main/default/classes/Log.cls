@@ -77,9 +77,18 @@ public class Log {
     }
 
     /**
-     * Add exception information
+     * Add generic exception information
      **/
     public static void rootException(Exception e) {
+        Log.root.exceptionType = e.getTypeName();
+        Log.root.exceptionStackTrace = e.getStackTraceString();
+        Log.root.exceptionMessage = e.getMessage();
+    }
+
+    /**
+     * Add JSON exception information
+     **/
+    public static void rootException(JSONException e) {
         Log.root.exceptionType = e.getTypeName();
         Log.root.exceptionStackTrace = e.getStackTraceString();
         Log.root.exceptionMessage = e.getMessage();

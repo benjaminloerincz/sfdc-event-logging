@@ -33,4 +33,22 @@ private class LogTest {
         System.assertEquals(1,[SELECT count() FROM LogRecording__c]);
 	}
 
+    @IsTest
+    public static void logJsonExceptionTest() { 
+        Test.startTest();
+        try {
+            String i;
+            Account acc = (Account)JSON.deserialize(i,Account.Class);
+        } catch(Exception e) {
+            String errorId = LogService.createErrorId();
+            log.push('MyTestClass');
+            log.errorId(errorId);
+            log.rootReason('In a test class');
+            log.rootException(e);
+            Log.emit();     
+        }
+        Test.stopTest();
+        System.assertEquals(1,[SELECT count() FROM LogRecording__c]);
+	}
+
 }
