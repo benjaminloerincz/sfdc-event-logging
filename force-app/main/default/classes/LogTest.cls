@@ -37,9 +37,9 @@ private class LogTest {
     public static void logJsonExceptionTest() { 
         Test.startTest();
         try {
-            String i;
+            String i = '{';
             Account acc = (Account)JSON.deserialize(i,Account.Class);
-        } catch(Exception e) {
+        } catch(JSONException e) {
             String errorId = LogService.createErrorId();
             log.push('MyTestClass');
             log.errorId(errorId);
