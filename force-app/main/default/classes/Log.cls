@@ -80,6 +80,7 @@ public class Log {
      * Add generic exception information
      **/
     public static void rootException(Exception e) {
+        System.debug('*** Exception Thrown: ' + e);
         Log.root.exceptionType = e.getTypeName();
         Log.root.exceptionStackTrace = e.getStackTraceString();
         Log.root.exceptionMessage = e.getMessage();
@@ -89,6 +90,7 @@ public class Log {
      * Add JSON exception information
      **/
     public static void rootException(JSONException e) {
+        System.debug('*** JSON Exception Thrown: ' + e);
         Log.root.exceptionType = e.getTypeName();
         Log.root.exceptionStackTrace = e.getStackTraceString();
         Log.root.exceptionMessage = e.getMessage();
